@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,500);
+@import url(https://fonts.googleapis.com/css?family=Sanchez);
+body {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.25em;
+  background-image: url("http://sites.psu.edu/librar ynews/wp-content/uploads/sites/2923/2014/03/Judy-Chicago-boxingPR.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+
+input {
+  font-family: "Sanchez";
+  margin: 5% auto;
+  max-width: 80%; }
+
+footer {
+  position: fixed;
+  bottom: 0; }
+
+.page-title {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #858585;
+  padding: 0.5%;
+  text-transform: uppercase; }
+
+.title-element {
+  padding-right: 7.5%; }
+
+.page-title h2, .page-title a {
+  margin: 0; }
+
+.page-title a {
+  font-size: 0.7em; }
+
+.main-objects {
+  margin-top: 80px;
+  display: block;
+  margin-left: 100px;
+  overflow-y: hidden; }
+
+.single-object {
+  padding: 0.25%;
+  margin: 2%;
+  display: inline-block;
+  width: 35%;
+  min-width: 200px;
+  background-color: #ff96ca; }
+
+.single-object > p {
+  word-wrap: break-word; }
+
+.single-image {
+  width: 90%;
+  padding: 2%; }
+
+.filter-results, .search, .related-artists, .related-shows {
+  position: fixed;
+  left: 2.5%;
+  z-index: 1;
+  background-color: #ff96ca;
+  padding: 1%;
+  font-size: 0.75em;
+  max-width: 25%;
+  text-transform: uppercase; }
+
+.search {
+  top: 15%;
+  display: block; }
+
+.filter-results {
+  top: 30%; }
+
+.error-message, .about {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.about {
+  background-color: #ff69b4;
+  margin: 0;
+  z-index: 999; }
+
+.error-message {
+  background-color: #ff96ca; }
+
+.related-artists, .related-shows, .search, .filter-results {
+  width: 27%;
+  max-height: 20%;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow-y: scroll;
+  padding: 0.5%; }
+
+.related-artists {
+  top: 47.5%; }
+
+.related-shows {
+  top: 70%; }
+
+.search p, .filter-results p {
+  margin: 0; }
+
+.search-button {
+  font-family: "Sanchez";
+  display: block;
+  margin: 0 auto; }
+
+.related-artists, .related-shows, .error-message {
+  display: none; }
+
+.related-artists p, .related-shows p, .schedule {
+  font-size: 0.8em; }
+
+.footer {
+  position: fixed;
+  left: 2.5%;
+  bottom: 25%;
+  font-size: 0.7em;
+  background-color: #ff96ca; }
+
+@media screen and (min-width: 560px) {
+  .related-artists, .related-shows, .search, .filter-results {
+    left: .5%;
+    width: 20%; }
+
+  .filter-results, .search {
+    font-size: 0.5em; }
+
+  .search-button, .filter-results input {
+    font-size: 0.25em; }
+
+  .filter-results {
+    top: 30.5%; }
+
+  .main-objects {
+    margin-left: 120px; } }
+@media screen and (min-width: 768px) {
+  .related-artists, .related-shows {
+    width: 15%; }
+
+  .search-button {
+    display: block; }
+
+  .filter-results, .search, .footer {
+    font-size: 0.9em; } }
+
+/*# sourceMappingURL=style.css.map */
