@@ -6,41 +6,45 @@ body {
   font-family: "Dosis", sans-serif;
   font-size: 1.25em;
   background-image: url("http://sites.psu.edu/librarynews/wp-content/uploads/sites/2923/2014/03/Judy-Chicago-boxingPR.jpg");
-  background-size: cover;
-  background-attachment: fixed; }
+  background-size: 100%;
+  background-repeat: repeat-y; }
 
 input {
   font-family: "Sanchez";
   margin: 5% auto;
   max-width: 80%; }
 
-footer {
-  position: fixed;
-  bottom: 0; }
-
 .page-title {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: 1;
   background-color: #858585;
-  padding: 0.5%;
   text-transform: uppercase; }
 
 .title-element {
   padding-right: 7.5%; }
 
+.centered {
+  width: 50%;
+  margin: 5% auto; }
+
+.filter-results, .search, .footer {
+  background-color: #ff96ca; }
+
+.filter-results, .search, .about, .footer {
+  width: 50%;
+  margin: 5% auto;
+  position: relative; }
+
+.about {
+  background-color: #ff69b4;
+  z-index: 999; }
+
 .page-title h2, .page-title a {
   margin: 0; }
 
 .page-title a {
-  font-size: 0.7em; }
+  font-size: 0.9em; }
 
 .main-objects {
-  margin-top: 80px;
   display: block;
-  margin-left: 100px;
   overflow-y: hidden; }
 
 .single-object {
@@ -48,7 +52,7 @@ footer {
   margin: 2%;
   display: inline-block;
   width: 35%;
-  min-width: 200px;
+  min-width: 275px;
   background-color: #ff96ca; }
 
 .single-object > p {
@@ -58,50 +62,8 @@ footer {
   width: 90%;
   padding: 2%; }
 
-.filter-results, .search, .related-artists, .related-shows {
-  position: fixed;
-  left: 2.5%;
-  z-index: 1;
-  background-color: #ff96ca;
-  padding: 1%;
-  font-size: 0.75em;
-  max-width: 25%;
-  text-transform: uppercase; }
-
-.search {
-  top: 15%;
-  display: block; }
-
-.filter-results {
-  top: 30%; }
-
-.error-message, .about {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.about {
-  background-color: #ff69b4;
-  margin: 0;
-  z-index: 999; }
-
 .error-message {
   background-color: #ff96ca; }
-
-.related-artists, .related-shows, .search, .filter-results {
-  width: 27%;
-  max-height: 20%;
-  max-width: 200px;
-  text-overflow: ellipsis;
-  overflow-y: scroll;
-  padding: 0.5%; }
-
-.related-artists {
-  top: 47.5%; }
-
-.related-shows {
-  top: 70%; }
 
 .search p, .filter-results p {
   margin: 0; }
@@ -111,6 +73,11 @@ footer {
   display: block;
   margin: 0 auto; }
 
+.related-artists, .related-shows {
+  background-color: #ff96ca;
+  width: 50%;
+  margin: 1% auto; }
+
 .related-artists, .related-shows, .error-message {
   display: none; }
 
@@ -118,34 +85,45 @@ footer {
   font-size: 0.8em; }
 
 .footer {
-  position: fixed;
-  left: 2.5%;
-  bottom: 25%;
   font-size: 0.7em;
   background-color: #ff96ca; }
 
-@media screen and (min-width: 560px) {
-  .related-artists, .related-shows, .search, .filter-results {
-    left: .5%;
-    width: 20%; }
+@media screen and (min-width: 760px) {
+  .footer, .filter-results, .search, .related-artists, .related-shows {
+    width: 15%;
+    position: fixed;
+    left: 1%;
+    z-index: 1;
+    padding: 1%;
+    max-width: 200px; }
 
-  .filter-results, .search {
-    font-size: 0.5em; }
-
-  .search-button, .filter-results input {
-    font-size: 0.25em; }
-
-  .filter-results {
-    top: 30.5%; }
+  .error-message, .about {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
   .main-objects {
-    margin-left: 120px; } }
-@media screen and (min-width: 768px) {
-  .related-artists, .related-shows {
-    width: 15%; }
+    margin-top: 80px;
+    margin-left: 100px; }
 
-  .search-button {
+  .search, .search-button {
     display: block; }
+
+  .filter-results {
+    top: 30%; }
+
+  .search {
+    top: 15%; }
+
+  .footer {
+    bottom: 15%; }
+
+  .related-artists {
+    top: 47.5%; }
+
+  .related-shows {
+    top: 70%; }
 
   .filter-results, .search, .footer {
     font-size: 0.9em; } }

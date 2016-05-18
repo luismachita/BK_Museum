@@ -13,7 +13,7 @@
 		<h2>Brooklyn Museum</h2>
 		<a class="title-element" ng-click="brooklynart.restart();"> ==> refresh page </a><a class="title-element" href="https://github.com/luismachita" target="_blank">github</a>     	
 	</div>
-	<div ngbrooklynart class="search">
+	<div ngbrooklynart class="search centered">
 		<form>
 			<p>search collection</p>	
 			<input class="search-button" type="text" ng-model="brooklynart.search">	
@@ -27,6 +27,9 @@
 	<div class ="about">
 		<h4>Use the search function above to explore the Brooklyn Museum collections</h4>
 	</div>
+	<div class="footer">
+		<p>Powered by the <br> Brooklyn Museum <a href="https://www.brooklynmuseum.org/opencollection/api/" target="_blank"> <br>API</a></p>
+	</div>
 	<div class="main-objects">
 		<div class="single-object" ng-repeat="image in brooklynart.images | filter:imageSearch">
 			<img class="single-image" src="{{image.link}}">
@@ -34,25 +37,24 @@
 			<p>{{image.title}}</p>
 			<p>{{image.medium}}</p>
 			<a href="{{image.url}}" target="_blank">check it out</a>
+			<br>
+			<a class="title-element" ng-click="brooklynart.restart();"> ==> refresh page </a>
 		</div>
 	</div>
 	<div class= "error-message">
 		<p>This search returned no results :( <br> Try a different search :)</p>
 	</div>
-	<div class="related-artists objects">
+	<div class="related-artists">
 		<h5>Related Artists</h5>
 		<div ng-repeat="artist in brooklynart.artists">
 			<a target="_blank" href="{{artist.url}}"><p>{{artist.name}}</p></a>
 		</div>
 	</div>
-	<div class="related-shows objects">
+	<div class="related-shows">
 		<h5>Related Exhibitions</h5>
 		<div  ng-repeat="exhibition in brooklynart.exhibitions">
 			<a target="_blank" href="{{exhibition.url}}"><p>{{exhibition.title}}</p></a>
 		</div>
 	</div>
-	<footer class="footer">
-		<p>Powered by the <br> Brooklyn Museum <a href="https://www.brooklynmuseum.org/opencollection/api/" target="_blank"> <br>API</a></p>
-	</footer>
 </body>
 </html>
