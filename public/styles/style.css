@@ -95,7 +95,12 @@ input {
     left: 1%;
     z-index: 1;
     padding: 1%;
-    max-width: 200px; }
+    max-width: 200px;
+    margin: 0; }
+
+  .related-artists, .related-shows {
+    max-height: 20%;
+    overflow-y: scroll; }
 
   .error-message, .about {
     position: fixed;
@@ -111,19 +116,19 @@ input {
     display: block; }
 
   .filter-results {
-    top: 30%; }
+    top: 25%; }
 
   .search {
-    top: 15%; }
+    top: 10%; }
 
   .footer {
     bottom: 15%; }
 
   .related-artists {
-    top: 47.5%; }
+    top: 40%; }
 
   .related-shows {
-    top: 70%; }
+    top: 65%; }
 
   .filter-results, .search, .footer {
     font-size: 0.9em; } }
